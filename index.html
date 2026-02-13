@@ -1,149 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Lakers Newsletter</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <head>
+    <title>Lakers Newsletter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-		<style type="text/css">
-			/* CLIENT-SPECIFIC STYLES */
-			body, table, td, a { 
-				-webkit-text-size-adjust: 100%; 
-				-ms-text-size-adjust: 100%; 
-			}
-			table, td { 
-				mso-table-lspace: 0pt; 
-				mso-table-rspace: 0pt; 
-			}
-			img { 
-				-ms-interpolation-mode: bicubic; 
-			}
+    <style type="text/css">
+     
+      body, table, td, a {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      table, td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
 
-			/* RESET STYLES */
-			img { 
-				border: 0; 
-				height: auto; 
-				line-height: 100%; 
-				outline: none; 
-				text-decoration: none; 
-			}
-			table { 
-				border-collapse: collapse !important; 
-			}
-			body { 
-				height: 100% !important; 
-				margin: 0 !important; 
-				padding: 0 !important; 
-				width: 100% !important; 
-			}
+     
+      img {
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+      }
+      table {
+        border-collapse: collapse !important;
+      }
+      body {
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+      }
 
-			/* iOS BLUE LINKS */
-			a[x-apple-data-detectors] {
-				color: inherit !important;
-				text-decoration: none !important;
-				font-size: inherit !important;
-				font-family: inherit !important;
-				font-weight: inherit !important;
-				line-height: inherit !important;
-			}
+     
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
 
-			/* GMAIL BLUE LINKS */
-			u + #body a {
-				color: inherit;
-				text-decoration: none;
-				font-size: inherit;
-				font-family: inherit;
-				font-weight: inherit;
-				line-height: inherit;
-			}
+    
+      u + #body a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
 
-			/* SAMSUNG MAIL BLUE LINKS */
-			#MessageViewBody a {
-				color: inherit;
-				text-decoration: none;
-				font-size: inherit;
-				font-family: inherit;
-				font-weight: inherit;
-				line-height: inherit;
-			}
-		</style>
-	</head>
+     
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
 
-	<body id="body" style="margin: 0 !important; padding: 0 !important; background-color:#ffffff; font-family:Arial, sans-serif;">
+    
+      @media screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+        }
+        .pad {
+          padding-left: 16px !important;
+          padding-right: 16px !important;
+        }
+        .h1 {
+          font-size: 24px !important;
+          line-height: 1.2 !important;
+        }
+      }
+    </style>
+  </head>
 
-		<!-- Container -->
-		<div style="max-width:600px; margin:0 auto; text-align:center;">
+  <body id="body" style="margin:0 !important; padding:0 !important; background-color:#f4f4f4; font-family:Arial, sans-serif;">
 
-			<!-- Logo image -->
-			<div style="margin-top:20px;">
-				<img
-					src="images/Los-Angeles-Lakers-Transparent-File.png"
-					alt="Los Angeles Lakers Logo"
-					style="width:120px; height:auto;"
-				>
-			</div>
+    <!-- Preheader (hidden preview text) -->
+    <div style="display:none; font-size:1px; color:#f4f4f4; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden;">
+      Lakers season update, news, and fan highlights — tap to read the latest.
+    </div>
 
-			<!-- Headline -->
-			<div style="margin:20px 0;">
-				<h1 style="font-size:28px; color:#552583; margin:0;">
-					Lakers Update — Stay in the Game!
-				</h1>
-			</div>
+    <!-- OUTER WRAPPER (100% width) -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4f4f4;">
+      <tr>
+        <td align="center" style="padding:20px 0;">
 
-			<!-- Hero Image -->
-			<div style="margin-bottom:20px;">
-				<img
-					src="images/Los-Angeles-Lakers-Transparent-File.png"
-					alt="Lakers Banner"
-					style="width:100%; max-width:560px; height:auto;"
-				>
-			</div>
+          <!-- INNER FIXED TABLE (600px) -->
+          <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" class="container" style="width:600px; background-color:#ffffff;">
+            <!-- Logo -->
+            <tr>
+              <td align="center" style="padding:20px 20px 10px 20px;">
+                <img
+                  src="assets/images/lakers-logo.png"
+                  width="120"
+                  alt="Los Angeles Lakers logo"
+                  style="display:block; width:120px; max-width:120px; height:auto;"
+                />
+              </td>
+            </tr>
 
-			<!-- Body copy -->
-			<div style="text-align:left; padding:0 20px;">
-				<p style="font-size:16px; color:#000000; line-height:1.5;">
-					The Lakers are almost halfway into an exciting season filled with action
-					and championship aspirations. Purple and gold fans all across the world
-					have tuned into the new look Lakers with Luka Doncic at the new face of the 
-					franchise as the Lebron James Era looks like it's coming to end soon.
-				</p>
+            <!-- Headline -->
+            <tr>
+              <td align="center" class="pad" style="padding:10px 20px 18px 20px;">
+                <h1 class="h1" style="margin:0; font-size:28px; color:#552583; line-height:1.2;">
+                  Lakers Update — Stay in the Game!
+                </h1>
+              </td>
+            </tr>
 
-				<p style="font-size:16px; color:#000000; line-height:1.5;">
-					Lebron and Luka lead the purple and gold now. Will it be enough to secure the championship this year?
-					Many NBA insiders and analysts like Farshad Azam say they lack the defensive personnel to win it.
-					They recently acquired Luke Kennard during the trade deadline! An impressive shooter that is shooting
-					nearly 50% from 3pt but lacks defensive ability the Lakers so desperately need.
-				</p>
-			</div>
+            <!-- Hero Image (responsive) -->
+            <tr>
+              <td align="center">
+                <img
+                  src="assets/images/hero.jpg"
+                  width="600"
+                  alt="Lakers game-night banner"
+                  style="display:block; width:100%; max-width:600px; height:auto;"
+                />
+              </td>
+            </tr>
 
-			<!-- Button -->
-			<div style="margin:25px 0;">
-				<a
-					href="#"
-					style="background-color:#552583; color:#FFFFFF; text-decoration:none;
-						   padding:12px 22px; font-size:16px; border-radius:4px;"
-				>
-					View Lakers News
-				</a>
-			</div>
+            <!-- Body Copy -->
+            <tr>
+              <td class="pad" style="padding:20px 20px 6px 20px; text-align:left;">
+                <p style="margin:0 0 14px 0; font-size:16px; color:#000000; line-height:1.5;">
+                  The Lakers are almost halfway into an exciting season filled with action
+                  and championship aspirations. Purple and gold fans all across the world
+                  have tuned into the new look Lakers with Luka Doncic as the new face of the
+                  franchise as the LeBron James era looks like it’s coming to an end soon.
+                </p>
 
-			<!-- Footer information -->
-			<div style="margin-top:30px; font-size:12px; color:#555555;">
-				<p>
-					You’re receiving this email because you love the Lakers!
-				</p>
+                <p style="margin:0; font-size:16px; color:#000000; line-height:1.5;">
+                  LeBron and Luka lead the purple and gold now. Will it be enough to secure the championship this year?
+                  Many NBA insiders and analysts (including Farshad Azam) say they lack the defensive personnel to win it.
+                  They recently acquired Luke Kennard — an impressive shooter near 50% from three — but defense is still the big question.
+                </p>
+              </td>
+            </tr>
 
-				<p>
-					Feel free to <a href="#" style="color:#552583;">unsubscribe</a>
-				</p>
+            <!-- Centered Button (bulletproof style + extra click spacing) -->
+            <tr>
+              <td align="center" style="padding:22px 20px 26px 20px;">
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td align="center" style="border-radius:8px;" bgcolor="#552583">
+                      <a
+                        href="https://www.nba.com/lakers"
+                        target="_blank"
+                        style="display:inline-block; font-family:Arial, sans-serif; font-size:16px; font-weight:bold;
+                               color:#ffffff; text-decoration:none; padding:16px 28px; border-radius:8px;"
+                        aria-label="Read the latest Lakers news on the official NBA site"
+                      >
+                        View Lakers News
+                      </a>
+                    </td>
+                  </tr>
+                </table>
 
-				<p>
-					Los Angeles, CA
-				</p>
-			</div>
+                <!-- extra spacing below button (easier to tap / less cramped) -->
+                <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
 
-		</div>
+                <p style="margin:0; font-size:12px; color:#666666; line-height:1.4;">
+                  You’ll be taken to the official Lakers page.
+                </p>
+              </td>
+            </tr>
 
-	</body>
+            <!-- Background Image Section Behind Text -->
+            <tr>
+              <td
+                background="assets/images/bg.jpg"
+                style="background-repeat:no-repeat; background-size:cover; background-position:center; padding:26px 20px;"
+              >
+                <h2 style="margin:0 0 10px 0; font-size:20px; color:#ffffff; line-height:1.2;">
+                  Game Night Spotlight
+                </h2>
+                <p style="margin:0; font-size:15px; color:#ffffff; line-height:1.5;">
+                  Don’t miss the next matchup — get updates, highlights, and fan picks all season long.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td align="center" class="pad" style="padding:22px 20px; font-size:12px; color:#555555; line-height:1.5;">
+                <p style="margin:0 0 8px 0;">
+                  You’re receiving this email because you love the Lakers!
+                </p>
+
+                <p style="margin:0 0 8px 0;">
+                  <a href="#" style="color:#552583; text-decoration:underline;">Unsubscribe from Lakers updates</a>
+                </p>
+
+                <p style="margin:0;">
+                  Los Angeles, CA
+                </p>
+              </td>
+            </tr>
+          </table>
+          <!-- END INNER TABLE -->
+
+        </td>
+      </tr>
+    </table>
+    <!-- END OUTER WRAPPER -->
+
+  </body>
 </html>
