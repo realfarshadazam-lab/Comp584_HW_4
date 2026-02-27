@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <style type="text/css">
-      
       body, table, td, a {
         -webkit-text-size-adjust: 100%;
         -ms-text-size-adjust: 100%;
@@ -20,7 +19,6 @@
         -ms-interpolation-mode: bicubic;
       }
 
-     
       img {
         border: 0;
         height: auto;
@@ -38,7 +36,6 @@
         width: 100% !important;
       }
 
-     
       a[x-apple-data-detectors] {
         color: inherit !important;
         text-decoration: none !important;
@@ -48,7 +45,6 @@
         line-height: inherit !important;
       }
 
-     
       u + #body a {
         color: inherit;
         text-decoration: none;
@@ -58,7 +54,6 @@
         line-height: inherit;
       }
 
-     
       #MessageViewBody a {
         color: inherit;
         text-decoration: none;
@@ -68,19 +63,96 @@
         line-height: inherit;
       }
 
-      
+      /* ========= ADDED: Multi-column + interactivity helpers ========= */
+      .p16 { font-size:16px; line-height:1.5; }
+      .small { font-size:12px; line-height:1.4; }
+      .h2 { font-size:20px; line-height:1.2; margin:0; }
+      .muted { color:#666666; }
+      .card {
+        border:1px solid #eeeeee;
+        border-radius:12px;
+      }
+      .pill {
+        display:inline-block;
+        padding:8px 12px;
+        border-radius:999px;
+        background:#f2edf8;
+        color:#552583;
+        font-weight:bold;
+        font-size:12px;
+        text-decoration:none;
+      }
+
+      /* Button & link interactivity (best-effort across clients) */
+      .btn a {
+        display:inline-block;
+        transition: background-color .2s ease, letter-spacing .2s ease, box-shadow .2s ease;
+        animation: glowPulse 2.8s ease-in-out infinite;
+      }
+      .btn a:hover {
+        background-color:#3f1d63 !important;
+        letter-spacing: .4px;
+        box-shadow: 0 10px 22px rgba(85,37,131,.28);
+      }
+      .link:hover {
+        color:#3f1d63 !important;
+        text-decoration: underline !important;
+      }
+
+      /* Keyframes animation (NOT opacity or scale) */
+      @keyframes glowPulse {
+        0%   { box-shadow: 0 0 0 rgba(253,185,39,.0); border-radius:8px; }
+        50%  { box-shadow: 0 0 18px rgba(253,185,39,.45); border-radius:16px; }
+        100% { box-shadow: 0 0 0 rgba(253,185,39,.0); border-radius:8px; }
+      }
+
+      /* “Checked box / radio + labels + divs” technique */
+      .tabs input { display:none; }
+      .tab-label {
+        display:inline-block;
+        padding:10px 12px;
+        border-radius:10px;
+        border:1px solid #e7e0f2;
+        background:#ffffff;
+        color:#552583;
+        font-weight:bold;
+        font-size:14px;
+        text-decoration:none;
+        cursor:pointer;
+        margin-right:8px;
+      }
+      .tab-panel { display:none; }
+      #tab-news:checked ~ .panels #panel-news,
+      #tab-tickets:checked ~ .panels #panel-tickets,
+      #tab-highlights:checked ~ .panels #panel-highlights {
+        display:block;
+      }
+      #tab-news:checked ~ .labels label[for="tab-news"],
+      #tab-tickets:checked ~ .labels label[for="tab-tickets"],
+      #tab-highlights:checked ~ .labels label[for="tab-highlights"] {
+        background:#552583;
+        color:#ffffff;
+        border-color:#552583;
+      }
+
+      /* ========= MOBILE ========= */
       @media screen and (max-width: 600px) {
-        .container {
-          width: 100% !important;
+        .container { width: 100% !important; }
+        .pad { padding-left: 16px !important; padding-right: 16px !important; }
+        .h1 { font-size: 24px !important; line-height: 1.2 !important; }
+
+        /* Stack columns on mobile */
+        .stack-column,
+        .stack-column-cell {
+          display:block !important;
+          width:100% !important;
+          max-width:100% !important;
         }
-        .pad {
-          padding-left: 16px !important;
-          padding-right: 16px !important;
-        }
-        .h1 {
-          font-size: 24px !important;
-          line-height: 1.2 !important;
-        }
+
+        /* Adjust text sizes on mobile */
+        .p16 { font-size:17px !important; line-height:1.55 !important; }
+        .h2 { font-size:18px !important; }
+        .tab-label { display:block !important; margin:0 0 10px 0 !important; text-align:center !important; }
       }
     </style>
   </head>
@@ -89,14 +161,12 @@
     id="body"
     style="margin:0 !important; padding:0 !important; background-color:#f4f4f4; font-family:Arial, sans-serif;"
   >
-  
     <div
       style="display:none; font-size:1px; color:#f4f4f4; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden;"
     >
       Lakers season update, news, and fan highlights — tap to read the latest.
     </div>
 
-    
     <table
       role="presentation"
       width="100%"
@@ -108,7 +178,6 @@
       <tr>
         <td align="center" style="padding:20px 0;">
 
-          
           <table
             role="presentation"
             width="600"
@@ -118,7 +187,6 @@
             class="container"
             style="width:600px; background-color:#ffffff;"
           >
-           
             <tr>
               <td align="center" style="padding:20px 20px 10px 20px;">
                 <img
@@ -130,7 +198,6 @@
               </td>
             </tr>
 
-           
             <tr>
               <td align="center" class="pad" style="padding:10px 20px 18px 20px;">
                 <h1 class="h1" style="margin:0; font-size:28px; color:#552583; line-height:1.2;">
@@ -139,7 +206,6 @@
               </td>
             </tr>
 
-            
             <tr>
               <td align="center">
                 <img
@@ -154,14 +220,14 @@
             <!-- Body Copy -->
             <tr>
               <td class="pad" style="padding:20px 20px 6px 20px; text-align:left;">
-                <p style="margin:0 0 14px 0; font-size:16px; color:#000000; line-height:1.5;">
+                <p class="p16" style="margin:0 0 14px 0; color:#000000;">
                   The Lakers are almost halfway into an exciting season filled with action
                   and championship aspirations. Purple and gold fans all across the world
                   have tuned into the new look Lakers with Luka Doncic as the new face of the
                   franchise as the LeBron James era looks like it’s coming to an end soon.
                 </p>
 
-                <p style="margin:0; font-size:16px; color:#000000; line-height:1.5;">
+                <p class="p16" style="margin:0; color:#000000;">
                   LeBron and Luka lead the purple and gold now. Will it be enough to secure the championship this year?
                   Many NBA insiders and analysts (Farshad Azam) say they lack the defensive personnel to win it.
                   They recently acquired Luke Kennard, an impressive shooter near 50% from three, but defense is still the big question.
@@ -169,17 +235,17 @@
               </td>
             </tr>
 
-            
+            <!-- CTA (kept the same, only added class for animation/hover) -->
             <tr>
               <td align="center" style="padding:22px 20px 26px 20px;">
                 <table role="presentation" cellpadding="0" cellspacing="0" border="0">
                   <tr>
-                    <td align="center" bgcolor="#552583" style="border-radius:8px;">
+                    <td align="center" bgcolor="#552583" style="border-radius:8px;" class="btn">
                       <a
                         href="https://www.nba.com/lakers"
                         target="_blank"
                         style="display:inline-block; font-family:Arial, sans-serif; font-size:16px; font-weight:bold;
-                               color:#ffffff; text-decoration:none; padding:16px 28px; border-radius:8px;"
+                               color:#ffffff; text-decoration:none; padding:16px 28px; border-radius:8px; background-color:#552583;"
                         aria-label="Read the latest Lakers news on the official NBA site"
                       >
                         View Lakers News
@@ -190,13 +256,211 @@
 
                 <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
 
-                <p style="margin:0; font-size:12px; color:#666666; line-height:1.4;">
+                <p class="small" style="margin:0; color:#666666;">
                   You’ll be taken to the official Lakers page.
                 </p>
               </td>
             </tr>
 
-            
+            <!-- ===================== ADDED: Two-column component ===================== -->
+            <tr>
+              <td class="pad" style="padding:0 20px 18px 20px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card" style="border:1px solid #eeeeee; border-radius:12px;">
+                  <tr>
+                    <td style="padding:16px 16px 0 16px;">
+                      <h2 class="h2" style="color:#552583;">This Week’s Focus</h2>
+                      <p class="p16 muted" style="margin:8px 0 0 0;">
+                        Two quick updates to keep you locked in.
+                      </p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding:16px;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <!-- Left column -->
+                          <td class="stack-column-cell" width="50%" valign="top" style="padding:0 8px 0 0;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card" style="border:1px solid #f0f0f0; border-radius:12px;">
+                              <tr>
+                                <td style="padding:14px;">
+                                  <span class="pill">Matchup</span>
+                                  <h3 style="margin:10px 0 6px 0; font-size:16px; color:#111111;">Next Game Preview</h3>
+                                  <p class="p16" style="margin:0; color:#333333;">
+                                    Keep an eye on transition defense and second-chance points — that’s where games swing late.
+                                  </p>
+                                  <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
+                                  <a class="link" href="https://www.nba.com/lakers/schedule" target="_blank" style="color:#552583; text-decoration:underline; font-weight:bold;">
+                                    View schedule →
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+
+                          <!-- Right column -->
+                          <td class="stack-column-cell" width="50%" valign="top" style="padding:0 0 0 8px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card" style="border:1px solid #f0f0f0; border-radius:12px;">
+                              <tr>
+                                <td style="padding:14px;">
+                                  <span class="pill">Spotlight</span>
+                                  <h3 style="margin:10px 0 6px 0; font-size:16px; color:#111111;">Player to Watch</h3>
+                                  <p class="p16" style="margin:0; color:#333333;">
+                                    Luka’s shot creation opens the floor — the key is pairing it with strong perimeter stops.
+                                  </p>
+                                  <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
+                                  <a class="link" href="https://www.nba.com/lakers/roster" target="_blank" style="color:#552583; text-decoration:underline; font-weight:bold;">
+                                    See roster →
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                </table>
+              </td>
+            </tr>
+
+            <!-- ===================== ADDED: Three-column component ===================== -->
+            <tr>
+              <td class="pad" style="padding:0 20px 18px 20px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card" style="border:1px solid #eeeeee; border-radius:12px;">
+                  <tr>
+                    <td style="padding:16px 16px 0 16px;">
+                      <h2 class="h2" style="color:#552583;">Quick Picks</h2>
+                      <p class="p16 muted" style="margin:8px 0 0 0;">Three things fans are clicking most this week.</p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding:16px;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td class="stack-column-cell" width="33.33%" valign="top" style="padding:0 8px 0 0;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card" style="border:1px solid #f0f0f0; border-radius:12px;">
+                              <tr><td style="padding:14px;">
+                                <h3 style="margin:0 0 6px 0; font-size:16px; color:#111111;">Highlights</h3>
+                                <p class="p16" style="margin:0; color:#333333;">Top plays, clutch moments, and game recaps.</p>
+                                <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
+                                <a class="link" href="https://www.nba.com/lakers/video" target="_blank" style="color:#552583; text-decoration:underline; font-weight:bold;">
+                                  Watch →
+                                </a>
+                              </td></tr>
+                            </table>
+                          </td>
+
+                          <td class="stack-column-cell" width="33.33%" valign="top" style="padding:0 8px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card" style="border:1px solid #f0f0f0; border-radius:12px;">
+                              <tr><td style="padding:14px;">
+                                <h3 style="margin:0 0 6px 0; font-size:16px; color:#111111;">Tickets</h3>
+                                <p class="p16" style="margin:0; color:#333333;">Find the next home game and lock your seats.</p>
+                                <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
+                                <a class="link" href="https://www.nba.com/lakers/tickets" target="_blank" style="color:#552583; text-decoration:underline; font-weight:bold;">
+                                  Browse →
+                                </a>
+                              </td></tr>
+                            </table>
+                          </td>
+
+                          <td class="stack-column-cell" width="33.33%" valign="top" style="padding:0 0 0 8px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card" style="border:1px solid #f0f0f0; border-radius:12px;">
+                              <tr><td style="padding:14px;">
+                                <h3 style="margin:0 0 6px 0; font-size:16px; color:#111111;">Shop Gear</h3>
+                                <p class="p16" style="margin:0; color:#333333;">Fresh drops and classic purple-and-gold looks.</p>
+                                <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
+                                <a class="link" href="https://lakersstore.com/" target="_blank" style="color:#552583; text-decoration:underline; font-weight:bold;">
+                                  Shop →
+                                </a>
+                              </td></tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ===================== ADDED: Radio/Label/Div “checked technique” ===================== -->
+            <tr>
+              <td class="pad" style="padding:0 20px 22px 20px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card" style="border:1px solid #eeeeee; border-radius:12px;">
+                  <tr>
+                    <td style="padding:16px;">
+                      <h2 class="h2" style="color:#552583;">Choose Your Update</h2>
+                      <p class="p16 muted" style="margin:8px 0 14px 0;">
+                        Tap a tab below. (Some email clients limit interactive CSS — if it doesn’t switch, the content still reads normally.)
+                      </p>
+
+                      <div class="tabs" style="font-family:Arial, sans-serif;">
+                        <!-- Default checked -->
+                        <input type="radio" name="tabs" id="tab-news" checked />
+                        <input type="radio" name="tabs" id="tab-tickets" />
+                        <input type="radio" name="tabs" id="tab-highlights" />
+
+                        <div class="labels" style="margin-bottom:12px;">
+                          <label class="tab-label" for="tab-news">News</label>
+                          <label class="tab-label" for="tab-tickets">Tickets</label>
+                          <label class="tab-label" for="tab-highlights">Highlights</label>
+                        </div>
+
+                        <div class="panels">
+                          <div id="panel-news" class="tab-panel">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card" style="border:1px solid #f0f0f0; border-radius:12px;">
+                              <tr><td style="padding:14px;">
+                                <p class="p16" style="margin:0; color:#333333;">
+                                  Latest team updates, standings context, and what to watch for next game.
+                                </p>
+                                <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
+                                <a class="link" href="https://www.nba.com/lakers/news" target="_blank" style="color:#552583; text-decoration:underline; font-weight:bold;">
+                                  Read news →
+                                </a>
+                              </td></tr>
+                            </table>
+                          </div>
+
+                          <div id="panel-tickets" class="tab-panel">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card" style="border:1px solid #f0f0f0; border-radius:12px;">
+                              <tr><td style="padding:14px;">
+                                <p class="p16" style="margin:0; color:#333333;">
+                                  Get to the arena — check availability for upcoming home games and special offers.
+                                </p>
+                                <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
+                                <a class="link" href="https://www.nba.com/lakers/tickets" target="_blank" style="color:#552583; text-decoration:underline; font-weight:bold;">
+                                  View tickets →
+                                </a>
+                              </td></tr>
+                            </table>
+                          </div>
+
+                          <div id="panel-highlights" class="tab-panel">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card" style="border:1px solid #f0f0f0; border-radius:12px;">
+                              <tr><td style="padding:14px;">
+                                <p class="p16" style="margin:0; color:#333333;">
+                                  Best clips, top plays, and postgame breakdowns — quick and easy.
+                                </p>
+                                <div style="height:10px; line-height:10px; font-size:10px;">&nbsp;</div>
+                                <a class="link" href="https://www.nba.com/lakers/video" target="_blank" style="color:#552583; text-decoration:underline; font-weight:bold;">
+                                  Watch highlights →
+                                </a>
+                              </td></tr>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Your existing spotlight section kept -->
             <tr>
               <td
                 background="images/Los-Angeles-Lakers-Transparent-File.png"
@@ -211,7 +475,7 @@
               </td>
             </tr>
 
-            
+            <!-- Footer kept; only added class "link" to show hover behavior best-effort -->
             <tr>
               <td align="center" class="pad" style="padding:22px 20px; font-size:12px; color:#555555; line-height:1.5;">
                 <p style="margin:0 0 8px 0;">
@@ -219,7 +483,7 @@
                 </p>
 
                 <p style="margin:0 0 8px 0;">
-                  <a href="#" style="color:#552583; text-decoration:underline;">
+                  <a href="#" class="link" style="color:#552583; text-decoration:underline;">
                     Unsubscribe from Lakers updates
                   </a>
                 </p>
@@ -230,11 +494,10 @@
               </td>
             </tr>
           </table>
-          
 
         </td>
       </tr>
     </table>
-    
+
   </body>
 </html>
